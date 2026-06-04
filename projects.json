@@ -12,8 +12,9 @@
         ],
         "github": "https://github.com/IDelgadoSancho/vallbonAR",
         "images": [
-            "media/pics/projects/vallbonar_1.jpg",
-            "media/pics/projects/vallbonar_2.jpg"
+            "media/pics/vallbonAR_pic1.webp",
+            "media/pics/vallbonAR_pic2.webp",
+            "media/pics/vallbonAR_pic3.webp"
         ]
     },
     {
@@ -29,14 +30,33 @@
         ],
         "github": "https://github.com/IDelgadoSancho/peer2stream",
         "images": [
-            "media/pics/projects/p2s_1.jpg",
-            "media/pics/projects/p2s_2.jpg"
+            "media/pics/peer2stream_pic1.webp",
+            "media/pics/peer2stream_pic2.webp",
+            "media/pics/peer2stream_pic3.webp"
+        ]
+    },
+    {
+        "title": "Laravel CRUD",
+        "tech": "PHP · Laravel · MySQL · HTML · CSS/Tailwind",
+        "description": "Full stack CRUD application developed with Laravel. Focused on managing structured data with clean architecture and basic authentication.",
+        "features": [
+            "Full CRUD system (create, read, update, delete)",
+            "Blade templates for frontend rendering",
+            "Form validation and error handling",
+            "Database integration with MySQL/SQLite",
+            "Basic authentication and user roles"
+        ],
+        "github": "https://github.com/IDelgadoSancho/Laravel_CRUD",
+        "images": [
+            "media/pics/laravelCrud_pic1.webp",
+            "media/pics/laravelCrud_pic2.webp",
+            "media/pics/laravelCrud_pic3.webp"
         ]
     },
     {
         "title": "Space-Survivors",
         "tech": "C# · Unity",
-        "description": "My first step in game development in Unity",
+        "description": "My first step in game development in Unity. A top-down Vampire Survivors like game. I used free assets from Unity Store and Itch.io",
         "features": [
             "2D movement and shooting mechanics",
             "Enemy spawning system",
