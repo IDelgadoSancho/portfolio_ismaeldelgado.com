@@ -66,6 +66,23 @@ fetch("./projects.json")
             </div>
         `).join("");
 
+        //---------add lightbox--------
+        setTimeout(() => {
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+
+            document.querySelectorAll(".project-gallery img").forEach(img => {
+                img.addEventListener("click", () => {
+                    lightboxImg.src = img.src;
+                    lightbox.classList.add("active");
+                });
+            });
+
+            lightbox.addEventListener("click", () => {
+                lightbox.classList.remove("active");
+            });
+        }, 0);
+
         initializeCarousel()
     });
 
@@ -74,7 +91,7 @@ fetch("./projects.json")
 function initializeCarousel() {
 
     const cards = document.querySelectorAll(".project-card");
-    
+
     document.querySelector(".next")
         .addEventListener("click", () => {
             cards[current].classList.remove("active");
@@ -89,3 +106,4 @@ function initializeCarousel() {
             cards[current].classList.add("active");
         });
 }
+
