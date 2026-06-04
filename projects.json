@@ -1,0 +1,54 @@
+[
+    {
+        "title": "VallbonAR",
+        "tech": "Kotlin · TypeScript · C# · Unity",
+        "description": "Final year Multiplatform Development (DAM) project developed in a team. I contributed to the mobile application and the augmented reality navigation system for indoor positioning in educational environments.",
+        "features": [
+            "Android App using Jetpack Compose",
+            "Use of Firebase for notifications",
+            "Augmented Reality Navigation with Unity AR foundation",
+            "ARCore Integration",
+            "API backend done in Typescript using Sanity CMS"
+        ],
+        "github": "https://github.com/IDelgadoSancho/vallbonAR",
+        "images": [
+            "media/pics/projects/vallbonar_1.jpg",
+            "media/pics/projects/vallbonar_2.jpg"
+        ]
+    },
+    {
+        "title": "Peer2Stream",
+        "tech": "Next.js · Node.js · MongoDB",
+        "description": "Final year Web Development (DAW) project developed in a team. I focused mainly on frontend development and API integration using Next.js and Node.js.",
+        "features": [
+            "Favorites and Notifications",
+            "Routing and API consumption with Node.js",
+            "Use of TMDB API",
+            "Use of JWT tokens for the authentication",
+            "Compatibilty with external plugins"
+        ],
+        "github": "https://github.com/IDelgadoSancho/peer2stream",
+        "images": [
+            "media/pics/projects/p2s_1.jpg",
+            "media/pics/projects/p2s_2.jpg"
+        ]
+    },
+    {
+        "title": "Space-Survivors",
+        "tech": "C# · Unity",
+        "description": "My first step in game development in Unity",
+        "features": [
+            "2D movement and shooting mechanics",
+            "Enemy spawning system",
+            "Basic wave progression",
+            "Collision and damage system",
+            "Done with Android in mind, but it can be play on PC"
+        ],
+        "github": "https://github.com/IDelgadoSancho/Space-Survivors",
+        "images": [
+            "media/pics/Space-Survivors_pic1.webp",
+            "media/pics/Space-Survivors_pic2.webp",
+            "media/pics/Space-Survivors_pic3.webp"
+        ]
+    }
+]
