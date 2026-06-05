@@ -41,7 +41,7 @@ body::before {
 .container {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    height: 100vh;
+    height: 100dvh;
     scroll-behavior: smooth;
     scroll-snap-stop: always;
     -webkit-overflow-scrolling: touch;
@@ -51,7 +51,7 @@ body::before {
 .section {
     overflow-x: hidden;
     scroll-snap-align: start;
-    min-height: 100vh;
+    min-height: 100dvh;
     padding: 2rem;
     box-sizing: border-box;
     display: flex;
@@ -86,16 +86,17 @@ header p {
     left: 50%;
     transform: translateX(-50%);
     right: auto;
+    animation: openCloseDown 2.2s ease-in-out infinite;
 }
 
 /*------icon animations---------*/
-.up-icon {
+/* .up-icon {
     animation: openCloseUp 2.2s ease-in-out infinite;
 }
 
 .down-icon {
     animation: openCloseDown 2.2s ease-in-out infinite;
-}
+} */
 
 @keyframes openCloseUp {
     0% {
@@ -124,8 +125,6 @@ header p {
         transform: translateY(0);
     }
 }
-
-
 
 .section hr {
     border: none;
@@ -299,6 +298,7 @@ header.section p,
     justify-content: flex-start;
     padding: 0.5rem 1rem;
     background: radial-gradient(circle at center, rgba(40, 50, 120, .45), rgba(10, 10, 30, .95));
+    /* background: url('../media/Circuit Primary_projects.svg') no-repeat center center / cover; */
 }
 
 #projects h2,
@@ -368,6 +368,7 @@ header.section p,
     object-fit: fill;
     aspect-ratio: 16 / 9;
     width: 100%;
+    border: 1px solid rgba(255, 255, 255, .1);
 }
 
 .project-thumbs {
@@ -382,6 +383,7 @@ header.section p,
     object-fit: fill;
     aspect-ratio: 16 / 9;
     width: 100%;
+    border: 1px solid rgba(255, 255, 255, .1);
 }
 
 /*-----content-------*/
@@ -478,7 +480,7 @@ header.section p,
     align-items: center;
     gap: 0.8rem;
     background: radial-gradient(circle at center, rgba(40, 50, 120, 0.25), rgba(10, 10, 30, 0.75));
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     color: #fff;
 }
@@ -543,22 +545,41 @@ header.section p,
 /* ---mobile responsive--- */
 @media (max-width: 768px) {
 
+    * {
+        box-sizing: border-box;
+    }
+
     html,
     body {
         font-size: 90%;
-    }
-
-    #header {
-        background: url('../media/Circuit_Primary_mobile_header.svg') no-repeat center center / cover;
+        overflow: hidden;
     }
 
     body::before {
         background: url('../media/Circuit_Primary_mobile.svg') no-repeat center center / cover;
     }
 
+    #header {
+        background: url('../media/Circuit_Primary_mobile_header.svg') no-repeat center center / cover;
+    }
+
+    /* --------section--------- */
+
+    .section {
+        padding: 4rem 1.5rem;
+        min-height: 100dvh;
+    }
+
+    .container {
+        height: 100dvh;
+    }
+
+    /* ----header------- */
+
     header h1 {
-        font-size: 2.5rem;
+        font-size: 2.7rem;
         text-align: center;
+        line-height: 1.1;
     }
 
     header p {
@@ -567,89 +588,173 @@ header.section p,
     }
 
     .profile-images {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
         margin-top: 2rem;
     }
 
     .profile-images img {
-        width: 140px;
-        height: 140px;
+        width: 220px;
+        height: 220px;
     }
 
-    .skills-row {
-        flex-direction: column;
-        gap: 1.5rem;
-        align-items: center;
+    /* -----about------ */
+
+    #about,
+    #skills,
+    #contact {
+        padding: 4rem 1.5rem;
+        align-items: flex-start;
     }
 
-    .skill-col {
-        width: 90%;
-        max-width: 360px;
-        height: auto;
+    #about h2,
+    #skills h2,
+    #projects h2,
+    .contact-content h2 {
+        font-size: 2.2rem;
     }
 
-    .project-card {
-        min-height: auto;
-        padding: 1.2rem;
+    #about h3 {
+        font-size: 1.7rem;
+        width: 100%;
+    }
+
+    #about h3,
+    #about p,
+    #skills h4,
+    #skills p {
+        width: 100%;
+        text-align: left;
+    }
+
+    /* -----skills------ */
+
+    #skills h4 {
+        font-size: 1.1rem;
+    }
+
+    /* ----projects------ */
+
+    #projects {
+        padding: 4rem 1rem;
     }
 
     .projects-carousel {
-        min-height: auto;
-        flex-direction: column;
-        align-items: center;
+        width: 100%;
+        gap: .5rem;
+        margin-top: 1rem;
     }
 
     .carousel-btn {
-        font-size: 2.2rem;
-        margin: 1rem 0;
+        font-size: 2.5rem;
+        flex-shrink: 0;
     }
 
-    .project-img {
-        width: 60px;
-        height: 60px;
+    .project-card {
+        flex-direction: column;
+        min-height: auto;
+        padding: 1rem;
+        gap: 1rem;
     }
+
+    .project-gallery,
+    .project-content {
+        width: 100%;
+    }
+
+    .project-main-img {
+        width: 100%;
+    }
+
+    .project-thumbs {
+        gap: .5rem;
+    }
+
+    .project-thumbs img {
+        width: calc(50% - .25rem);
+    }
+
+    .project-content h3 {
+        font-size: 1.6rem;
+    }
+
+    .project-content h4 {
+        font-size: 1rem;
+    }
+
+    .project-content p,
+    .project-content li {
+        font-size: .95rem;
+    }
+
+    .project-link {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    /* -----contact------- */
 
     .contact-content {
-        padding: 1.5rem;
+        width: 100%;
+        margin-top: 0;
+        padding: 0;
+        align-items: center;
+    }
+
+    .contact-content h2 {
+        width: 100%;
+        text-align: center;
     }
 
     .contact-content p {
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    #contact {
+        display: flex;
+        flex-direction: column;
+        min-height: 100dvh;
+        justify-content: space-between;
+    }
+
+    /* ----footer------- */
+
+    .contact-footer {
+        position: relative;
+        width: 100%;
+        margin-top: auto;
+        padding: 1.2rem 2rem;
+        box-sizing: border-box;
+    }
+
+    .contact-footer h3 {
         font-size: 1rem;
         text-align: center;
     }
 
-    footer nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
+    .footer-links {
+        gap: .8rem;
     }
+
+    .footer-links a {
+        font-size: .85rem;
+    }
+
+    .footer-copy {
+        text-align: center;
+        font-size: .75rem;
+    }
+
+    /* ------scroll-icons------- */
 
     .scroll-icon {
         font-size: 2rem;
     }
 
-    #about {
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        padding-bottom: 3.5rem;
-        position: relative;
-    }
-
-    #about .scroll-icon.down-icon {
-        position: relative;
-        left: 0;
-        right: 0;
-        margin-left: auto;
-        margin-right: auto;
-        transform: none;
-        display: block;
-        margin-top: 2.5rem;
-        margin-bottom: 0;
+    .up-icon,
+    .down-icon {
+        font-size: 2rem;
+        right: 1rem;
     }
 }
