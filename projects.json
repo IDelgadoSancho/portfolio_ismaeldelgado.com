@@ -46,7 +46,7 @@
             "Database integration with MySQL/SQLite",
             "Basic authentication and user roles"
         ],
-        "github": "https://github.com/IDelgadoSancho/Laravel_CRUD",
+        "github": "https://github.com/IDelgadoSancho/crud_laravel",
         "images": [
             "media/pics/laravelCrud_pic1.webp",
             "media/pics/laravelCrud_pic2.webp",
